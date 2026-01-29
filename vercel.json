@@ -3,15 +3,8 @@
     "outputDirectory": "dist",
     "rewrites": [
         {
-            "source": "/api/:path*",
-            "destination": "http://localhost:8000/api/:path*"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/[^.]+",
-            "dest": "/",
-            "status": 200
+            "source": "/(.*)",
+            "destination": "/index.html"
         }
     ]
 }
