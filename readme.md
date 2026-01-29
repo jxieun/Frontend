@@ -10,6 +10,51 @@
 
 ---
 
+## 🛠️ 로컬 개발 환경
+
+### 1. 프론트엔드 실행
+
+```bash
+# 의존성 설치
+pnpm install
+
+# 개발 서버 실행
+pnpm run dev
+```
+
+접속: http://localhost:5173
+
+### 2. 백엔드 서비스 실행 (Docker)
+
+프론트엔드와 연동하려면 백엔드 서비스도 실행해야 합니다.
+
+```bash
+# deployment 폴더로 이동
+cd ../deployment
+
+# 모든 백엔드 서비스 실행
+docker compose up -d
+
+# 서비스 상태 확인
+docker compose ps
+```
+
+**실행되는 서비스**:
+- **Infrastructure** (7개): PostgreSQL, MongoDB, Kafka, Zookeeper, Milvus, etcd, MinIO
+- **Backend** (4개): user-service, diary-service, social-service, petmate-service
+- **Gateway**: api-gateway (포트 8000)
+
+**API Gateway**: http://localhost:8000
+
+### 3. 서비스 중지
+
+```bash
+cd ../deployment
+docker compose down
+```
+
+---
+
 ## FASD 아키텍처 마이그레이션 구현 계획
 
 PetLog 프론트엔드를 **Hybrid FASD (Feature-App-Shared-Design)** 구조로 재구성하여 MSA 스타일의 유지보수성과 백엔드 연동 유연성을 확보합니다.
