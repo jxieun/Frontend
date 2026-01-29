@@ -1,4 +1,16 @@
-# FASD 아키텍처 마이그레이션 구현 계획
+# PetLog Frontend
+
+## 🚀 배포 주소
+
+**Production**: [https://petlog-nu.vercel.app](https://petlog-nu.vercel.app)
+
+- **플랫폼**: Vercel
+- **자동 배포**: GitHub main/dev 브랜치 푸시 시 자동 재배포
+- **환경 변수**: Vercel Dashboard에서 관리
+
+---
+
+## FASD 아키텍처 마이그레이션 구현 계획
 
 PetLog 프론트엔드를 **Hybrid FASD (Feature-App-Shared-Design)** 구조로 재구성하여 MSA 스타일의 유지보수성과 백엔드 연동 유연성을 확보합니다.
 
